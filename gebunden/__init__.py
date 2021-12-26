@@ -8,8 +8,9 @@ def main(global_config, **settings):
 
         config.add_static_view('static', 'static')
         
-        config.add_view(gebunden.views.my_view)
-        
         config.add_route('home', '/')
-        config.scan()
+
+        # Only views defined in this module will be found.
+        # @view_config decorator will configure them.
+        config.scan(package=gebunden.views)
     return config.make_wsgi_app()
