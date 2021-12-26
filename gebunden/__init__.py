@@ -9,8 +9,11 @@ def main(global_config, **settings):
         config.add_static_view('static', 'static')
         
         config.add_route('home', '/')
+        config.add_route('entry',  '/entry/{month}/{index}')
 
         # Only views defined in this module will be found.
         # @view_config decorator will configure them.
+        # It's important for readability that we restrict the scan here,
+        # instead of using a bare 'config.scan()'.
         config.scan(package=gebunden.views)
     return config.make_wsgi_app()
