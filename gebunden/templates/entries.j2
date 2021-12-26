@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Conforming HTML5 Template</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link href="/static/main.css" rel="stylesheet">
+</head>
+<body>
+  <ul>
+  {% for path, count in pairs %}
+    {% for n in range(count) %}
+       <li><a href="{{ request.route_url('entry', month=path, index=n) }}">{{path}} {{n}}</a></li>
+    {% endfor %}
+  {% endfor %}
+  </ul>
+</body>
+</html>
+
+
+
+
+

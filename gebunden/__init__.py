@@ -10,6 +10,7 @@ def main(global_config, **settings):
         
         config.add_route('home', '/')
         config.add_route('entry',  '/entry/{month}/{index}')
+        config.add_route('entries',  '/entries')
 
         # Only views defined in this module will be found.
         # @view_config decorator will configure them.
