@@ -7,10 +7,20 @@ authors = ["David Banks <amoebae@gmail.com>"]
 [tool.poetry.scripts]
 server = "gebunden.server:main"
 
+
 [tool.poetry.dependencies]
 python = "^3.9"
+gunicorn = "^20.1.0"
+pyramid = "^2.0"
+waitress = "^2.0.0"
+pyramid-jinja2 = "^2.8"
 
 [tool.poetry.dev-dependencies]
+
+
+
+# [tool.poetry.plugins."paste.app_factory"]
+# main = "gebunden:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
