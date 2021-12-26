@@ -32,4 +32,7 @@ def entry(request):
     entry = entries[index]
     
     # ... do some crap here ...
-    return {'event': entry.event, 'month': month, 'index': index}
+    return {
+        'event': entry.event, 'month': month, 'index': index,
+        'event_time': entry.event_time, 'subject': entry.subject
+    }

@@ -1,3 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Conforming HTML5 Template</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+<!-- <script src="http://code.jquery.com/jquery-1.12.0.js"></script> -->
+<!-- <script src="http://underscorejs.org/underscore.js"></script> -->
+<!-- <script src="main.js"></script> -->
+<link href="/static/main.css" rel="stylesheet">
+</head>
+<body>
+  <div class="entry">
+    <div class="event_time">{{ event_time }}</div>
+
+    <div class="subject">
+      {% if subject %}
+      {{ subject }}
+      {% else %}
+      (no subject)
+      {% endif %}
+    </div>
+
+    <div class="event">
+      {{ event }}
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
 Foo {{ month }} values {{ index }}
 
 {{event}}
