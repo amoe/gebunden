@@ -1,6 +1,6 @@
 from pyramid.view import view_config
 import pyramid.response
-import gebunden.format_livejournal_archive
+#import gebunden.format_livejournal_archive
 
 @view_config(
     route_name='home',
