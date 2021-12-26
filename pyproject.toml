@@ -4,6 +4,9 @@ version = "0.1.0"
 description = ""
 authors = ["David Banks <amoebae@gmail.com>"]
 
+[tool.poetry.scripts]
+server = "gebunden.server:main"
+
 [tool.poetry.dependencies]
 python = "^3.9"
 
